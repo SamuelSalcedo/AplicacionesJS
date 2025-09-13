@@ -1,0 +1,75 @@
+
+/*TRAER TIPOGRAFIAS*/
+@import url('https://fonts.googleapis.com/css2?family=Bitcount+Grid+Double:wght@100..900&family=Jura:wght@300..700&family=Nata+Sans:wght@100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Bitcount+Grid+Double:wght@100..900&family=Jura:wght@300..700&family=Nata+Sans:wght@100..900&display=swap');
+
+:root{
+    --fondo-info: #9ddd8e;
+
+    --fondo-game:#5563d99e;
+
+
+    --primary-color: #d73838;
+    --secundary-color: #2098ed8a;
+    --fuente-game: "Bitcount Grid Double", system-ui;
+    --fuente-elegante: "Jura", sans-serif;
+}
+
+h1, h2{
+    margin: 0;
+    padding: 5px;
+}
+
+.data-section{
+    display: flex;
+    flex-direction: column;
+    position:initial;
+    align-items: center;
+    font-family: var(--fuente-game);
+    font-size: x-large;
+    font-weight: 100;
+
+    background-color:var(--fondo-info);
+    border: 5px;
+    border-radius: 10px;
+    margin: 25px;
+}
+
+
+.main-game{
+    background-color: var(--fondo-game);
+    display: flex;
+    flex-direction: column;
+
+    border-radius: 8px;
+    border-width: 5px;
+    border-color: var(--primary-color);
+}
+
+.info-text{
+    font-family:var(--fuente-elegante);
+    font-size: xx-large;
+}
+
+.select-figure{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.button-game{
+    background-color:var(--secundary-color);
+    color: var(--primary-color);
+    border-radius: 15px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: xx-large;
+    padding: 13px;
+    margin: 15px;
+}
+
+.button-game:hover{
+    margin: 25px;
+    background-color: aqua;
+}
