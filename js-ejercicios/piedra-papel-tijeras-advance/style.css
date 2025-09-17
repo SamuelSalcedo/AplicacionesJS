@@ -24,19 +24,52 @@
 
 h2{
     color: #01344F;
-    margin: 0;
-    padding: 5px;
+    margin: 45px;
+    padding: 15px;
     font-size: 3em;
+    
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.22);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(12.6px);
+    -webkit-backdrop-filter: blur(12.6px);
+    border: 1px solid rgba(255, 255, 255, 0.28);
+
 }
 
 h1{
     color: #01344F;
-    margin: 0;
-    padding: 5px;
+    margin: 25px;
+    padding: 15px;
     font-size: 6em;
+
+    background-clip:padding-box;
+    
+    /* From https://css.glass */
+    background: var(--detail-color);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px var(--secundary-color);
+    backdrop-filter: blur(11.2px);
+    -webkit-backdrop-filter: blur(11.2px);
+    border: 1px solid var(--background-color);    
+
+    color: var(--primary-color);
+
+    transition: background-color 3s ease-in-out;
+    transition: color 2s ease-in;
+
 }
+
 body{
     background-color: var(--background-color);
+
+}
+.main-content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 35px;
 }
 .data-section{
     display: flex;
@@ -62,12 +95,17 @@ body{
     border-radius: 8px;
     border-width: 5px;
     border-color: var(--primary-color);
+
+        width: 40%;
+
 }
 
 .info-text{
     font-family:var(--fuente-elegante);
     font-size: xx-large;
     color:var(--primary-color);
+    border-style: dashed;
+    padding: 10px;
 }
 
 .select-figure{
@@ -92,6 +130,49 @@ body{
     box-shadow: inset 0 0 0 20px var(--background-color); /* Colored "padding" */
 
 }
+
 .button-game:hover{
     background-color: var(--primary-color);
+}
+
+.select-option{
+    border-radius: 10px;
+    border-style: double;
+    border-color: var(--primary-color);
+    background-color: var(--background-color);
+
+}
+
+.select-option:hover{
+    padding: 15px;
+    background-color: #88b0b4;
+}
+
+.result-game{
+    border-color: var(--detail-color);
+    border-style: groove;
+    background-color: var(--secundary-color);
+    width: 50%;
+    padding: 15px;
+}
+
+.result-play{
+    border-style: ridge;
+    border-radius: 15px;
+    border-color: var(--primary-color);
+
+    padding: 25px;
+    display: flex;
+    justify-content:space-around;
+}
+
+.result-text{
+    font-family: var(--fuente-game);
+    font-size: 2em;
+    color: var(--primary-color);
+
+    border-style: dotted;
+    border-width: 15px;
+    padding: 15px;
+    border-color: var(--details);
 }
