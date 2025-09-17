@@ -27,9 +27,9 @@ h2{
     margin: 45px;
     padding: 15px;
     font-size: 3em;
-    
+
     /* From https://css.glass */
-    background: rgba(255, 255, 255, 0.22);
+    background: rgba(255, 255, 255, 0.50);
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(12.6px);
@@ -47,16 +47,12 @@ h1{
     background-clip:padding-box;
     
     /* From https://css.glass */
-    background: var(--detail-color);
+    background: rgba(239, 204, 143, 0.48);
     border-radius: 16px;
-    box-shadow: 0 4px 30px var(--secundary-color);
-    backdrop-filter: blur(11.2px);
-    -webkit-backdrop-filter: blur(11.2px);
-    border: 1px solid var(--background-color);    
-
-    color: var(--primary-color);
-
-    transition: background-color 3s ease-in-out;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(11px);
+    -webkit-backdrop-filter: blur(11px);
+    border: 1px solid rgba(239, 204, 143, 0.3);
     transition: color 2s ease-in;
 
 }
@@ -71,6 +67,7 @@ body{
     justify-content: space-around;
     margin: 35px;
 }
+
 .data-section{
     display: flex;
     flex-direction: column;
@@ -80,12 +77,28 @@ body{
     font-size: x-large;
     font-weight: 100;
 
-    background-color:var(--primary-color    );
+    background-image: url(/assets/background.png);
     border: 5px;
     border-radius: 10px;
     margin: 25px;
-}
 
+      background-repeat:repeat-x; /* Or no-repeat, depending on your needs */
+      animation-name: moveBackground;
+      animation-duration: 25s; /* How long the animation takes */
+      animation-timing-function: linear; /* Speed curve of the animation */
+      animation-iteration-count: infinite; /* How many times the animation repeats (infinite for continuous) */
+      animation-direction:initial; 
+}
+    @keyframes moveBackground {
+    
+      from {
+        background-position: 0% 0%; 
+      }
+      to {
+        background-position: 1489px 0%; 
+      }
+    
+    }
 
 .main-game{
     background-color: var(--secundary-color);
