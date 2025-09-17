@@ -1,30 +1,34 @@
 // controller.js
-import { CounterModel } from "./model.js";
-import { CounterView } from "./view.js";
+import { SelectionModel } from "./model.js";
+import { SelectionView } from "./view.js";
 
-class CounterController {
+class selectionController {
   constructor(model, view) {
     this.model = model;
     this.view = view;
 
     // Inicializar vista
-    this.view.update(this.model.getValue());
+    this.view.mostrarSeleccion(this.model.getValueA());
 
     // Eventos
-    this.view.bindIncrement(this.handleIncrement.bind(this));
-    this.view.bindDecrement(this.handleDecrement.bind(this));
+    this.view.bindSelection(this.handleSelection.bind(this))
+    //this.view.bindDecrement(this.handleDecrement.bind(this));
   }
 
-  handleIncrement() {
-    this.model.increment();
-    this.view.update(this.model.getValue());
+  jugarSeleccion(selection){
+    //este es el value del boton
+    this.model.setValueA(selection);
+    this.model.play();
   }
 
-  handleDecrement() {
-    this.model.decrement();
-    this.view.update(this.model.getValue());
+
+  handleSelection(valor){
+    console.log(valor);
+    this.model.setValueA(valor);
+    this.view.mostrarSeleccion(this.model.getValueA());
   }
+
 }
 
 // Instanciar
-const app = new CounterController(new CounterModel(), new CounterView());
+const app = new selectionController(new SelectionModel(), new SelectionView());
