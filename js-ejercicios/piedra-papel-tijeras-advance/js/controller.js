@@ -21,7 +21,6 @@ class selectionController {
     this.model.play();
   }
 
-
   handleUpdate(valor){
     console.log(valor);
     this.model.setValueA(valor);

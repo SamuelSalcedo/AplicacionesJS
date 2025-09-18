@@ -11,8 +11,6 @@ export class SelectionView {
     
     // Insertar en la app
       this.app.appendChild(this.mostrarSeleccionado);
-   // this.app.appendChild(this.incrementButton);
-   // this.app.appendChild(this.decrementButton);
   }
 
   mostrarSeleccion(value){
