@@ -11,7 +11,7 @@ class selectionController {
     this.view.mostrarSeleccion(this.model.getValueA());
 
     // Eventos
-    this.view.bindSelection(this.handleSelection.bind(this))
+    this.view.bindButtons(this.handleUpdate.bind(this))
     //this.view.bindDecrement(this.handleDecrement.bind(this));
   }
 
@@ -22,7 +22,7 @@ class selectionController {
   }
 
 
-  handleSelection(valor){
+  handleUpdate(valor){
     console.log(valor);
     this.model.setValueA(valor);
     this.view.mostrarSeleccion(this.model.getValueA());

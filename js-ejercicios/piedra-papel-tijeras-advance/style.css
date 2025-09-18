@@ -77,7 +77,7 @@ body{
     font-size: x-large;
     font-weight: 100;
 
-    background-image: url(/assets/background.png);
+    background-image: url(/js-ejercicios/piedra-papel-tijeras-advance/assets/background.png);
     border: 5px;
     border-radius: 10px;
     margin: 25px;
@@ -128,7 +128,7 @@ body{
 }
 
 
-.button-game{
+.buttonGame{
     background-color:var(--detail-color);
     color: var(--details);
     border-radius: 15px;
@@ -144,7 +144,7 @@ body{
 
 }
 
-.button-game:hover{
+.buttonGame:hover{
     background-color: var(--primary-color);
 }
 
