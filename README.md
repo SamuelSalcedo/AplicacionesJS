@@ -22,6 +22,9 @@ esta respuesta de reddit explica un poco mejor el como se resuelve este juego de
 
 https://en.wikipedia.org/wiki/Nash_equilibrium
 
+## ESTILO Y DISENO
+Ademas como un experimetno personal implemente varios estilos de tendencias como el glassmorphism y felxbox en css ademas de que yo mismo cree animaciones para que el sitio no sea tan aburrido y recuerde a como eran los videojuegos del antiguo internet.
+
 
 ## 🛠 Lenguajes y herramientas
 Este proyecto se creo usando el patron MVC en JavaScript para pode hacer funcionar la logica del juego ademas de este lenguaje y framework:
