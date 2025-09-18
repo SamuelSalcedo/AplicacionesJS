@@ -165,6 +165,28 @@ body{
     width: 90%;
 }
 
+.buttonGame2{
+    background-color:var(--primary-color);
+    color: var(--secundary-color);
+    border-radius: 15px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: xx-large;
+    padding: 13px;
+    margin: 15px;
+    width: 90%;
+}
+
+.buttonGamePlay{
+    background-color:var(--primary-color);
+    color: var(--secundary-color);
+    border-radius: 15px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: xx-large;
+    padding: 13px;
+    margin: 15px;
+    width: 90%;
+}
+
 .button-frame:hover{
     padding: 5px;
     border-radius: 15px;
@@ -173,6 +195,16 @@ body{
 
 .buttonGame:hover{
     background-color: var(--primary-color);
+}
+
+.buttonGame2:hover{
+    background-color: var(--detail-color);
+    color: var(--primary-color);
+}
+
+.buttonGamePlay:hover{
+    background-color: var(--detail-color);
+    color: var(--primary-color);
 }
 
 .select-option{

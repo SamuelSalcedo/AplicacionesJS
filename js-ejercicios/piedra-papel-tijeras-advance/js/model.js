@@ -8,19 +8,25 @@ export class SelectionModel {
     this.a=0;
     this.b=0;
 
+    this.ganador =0
   }
   
 
-  play(a, b){
-    if ((a - b)==1){
-      return a;
-    }else if ((a - b)==2){
-      return b;
+  setGanador(){
+    if ((this.a - this.b)==1){
+      this.ganador = this.a;
+    }else if ((this.a - this.b)==2){
+      this.ganador = this.b;
     }else{
-      return 0;
+      this.ganador;
     }
   }
   
+  getGanador(){
+    console.log(this.ganador)
+    return this.ganador;
+  }
+
   setValueA(selector){
     if(selector == 'piedra'){
       this.a = this.piedra;
@@ -32,12 +38,22 @@ export class SelectionModel {
     else{
       this.a = 0;
     }
-        console.log(this.a);
-
+    console.log(this.a);
   }
 
-  setValueB(b){
-    return this.b = b;
+  setValueB(selector){
+    if(selector == 'piedra'){
+      this.b = this.piedra;
+    }else if(selector == "papel"){
+      this.b = this.papel;
+    }else if(selector == 'tijeras'){
+      this.b = this.tijeras;
+    }
+    else{
+      this.b = 0;
+    }
+      console.log(this.b);
+
   }
 
   increment() {
@@ -50,5 +66,10 @@ export class SelectionModel {
 
   getValueA() {
     return this.a;
+  }
+
+
+  getValueB() {
+    return this.b;
   }
 }
