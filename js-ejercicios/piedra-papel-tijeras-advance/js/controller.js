@@ -19,10 +19,8 @@ class selectionController {
     this.view.jugarSeleccion(this.jugarTodo.bind(this));
   }
 
-  jugarTodo(valor){
-//    this.view.jugarSeleccion(this.model.setGanador());
-    
-    this.model.convertirGanador();
+  jugarTodo(valor){    
+    this.model.setGanador();
     this.view.mostrarResultado(this.model.getGanador())
     console.log(`GANADOR: ${valor}`)
   }
@@ -39,6 +37,7 @@ class selectionController {
     this.view.mostrarSeleccion(this.model.getValueB());
   }
 
+  
 }
 
 // Instanciar
