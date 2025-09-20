@@ -11,6 +11,9 @@ export class SelectionModel {
     this.ganador =0
   }
   
+  convertirGanador(){
+    return this.ganador;
+  }
 
   setGanador(){
     if ((this.a - this.b)==1){
@@ -23,6 +26,7 @@ export class SelectionModel {
   }
   
   getGanador(){
+    this.setGanador()
     console.log(this.ganador)
     return this.ganador;
   }

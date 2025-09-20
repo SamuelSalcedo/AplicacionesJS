@@ -16,12 +16,13 @@ class selectionController {
     //this.view.bindDecrement(this.handleDecrement.bind(this));
     this.view.bindButtonsB(this.handleUpdateB.bind(this));
 
-    this.view.jugarSeleccion(this.jugarSeleccion.bind(this));
+    this.view.jugarSeleccion(this.jugarTodo.bind(this));
   }
 
-  jugarSeleccion(valor){
-    this.view.jugarSeleccion(this.model.setGanador());
-
+  jugarTodo(valor){
+//    this.view.jugarSeleccion(this.model.setGanador());
+    
+    this.model.convertirGanador();
     this.view.mostrarResultado(this.model.getGanador())
     console.log(`GANADOR: ${valor}`)
   }

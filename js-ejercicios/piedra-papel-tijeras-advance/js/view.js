@@ -9,7 +9,7 @@ export class SelectionView {
     //seleccion del jugador b
     this.seleccion2 = document.querySelectorAll('.buttonGame2')
 
-    this.jugar = document.querySelector('.buttonGamePlay')
+    this.jugar = document.getElementById('buttonSelect')
 
     this.mostrarSeleccionado = document.createElement("h2");
 
@@ -30,6 +30,8 @@ export class SelectionView {
   }
   
   bindButtons(handler) {
+        console.log('este es ele handler:'+handler)
+
     this.seleccion.forEach(boton => {
       boton.addEventListener("click", () => {
         handler(boton.value);
@@ -39,6 +41,7 @@ export class SelectionView {
 
 //segundo handler para el segundo boton
   bindButtonsB(handler) {
+    console.log('este es ele handler:'+handler)
     this.seleccion2.forEach(boton => {
       boton.addEventListener("click", () => {
         handler(boton.value);
@@ -48,10 +51,14 @@ export class SelectionView {
 
   //este escucha el evento pra jugar
   jugarSeleccion(handler){
+    console.log('este es el handler jugar: '+handler)
+
     this.jugar.addEventListener('click', () =>{
       handler(this.jugar.value);
     });
     
   }
 }
+
+//Uncaught TypeError: handler is not a function
 
