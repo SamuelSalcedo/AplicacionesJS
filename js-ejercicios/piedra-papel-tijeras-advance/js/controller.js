@@ -6,9 +6,8 @@ class selectionController {
   constructor(model, view) {
     this.model = model;
     this.view = view;
-
     // Inicializar vista
-    this.view.mostrarSeleccion(this.model.getValueA(this));
+    //this.view.mostrarSeleccion(this.model.getValueA(this));
 
     this.view.mostrarResultado(this.model.getGanador(this));
     // Eventos
@@ -17,24 +16,35 @@ class selectionController {
     this.view.bindButtonsB(this.handleUpdateB.bind(this));
 
     this.view.jugarSeleccion(this.jugarTodo.bind(this));
-  }
 
+    this.view.reinicioJuego(this.reiniciar.bind(this));
+
+    this.reiniciar();
+  }
   jugarTodo(valor){    
     this.model.setGanador();
-    this.view.mostrarResultado(this.model.getGanador())
-    console.log(`GANADOR: ${valor}`)
+    this.view.mostrarResultado(this.model.getGanador());
+    //el value del boton aun sin un uso adecuado asi que mejor lo quito
+   // console.log(`GANADOR: ${valor}`)
+  }
+
+  reiniciar(value){
+    this.model.setReset();
+    //this.model.getReset();
+    //this.view.mostrarSeleccion(this.model.getReset());
+    this.view.mostrarResultado(this.model.getReset());
   }
 
   handleUpdate(valor){
     console.log(`VALOR DE A: ${valor}`);
     this.model.setValueA(valor);
-    this.view.mostrarSeleccion(this.model.getValueA());
+  //  this.view.mostrarSeleccion(this.model.getValueA());
   }
 
   handleUpdateB(valor){
     console.log(`VALOR DE B: ${valor}`);
     this.model.setValueB(valor);
-    this.view.mostrarSeleccion(this.model.getValueB());
+   // this.view.mostrarSeleccion(this.model.getValueB());
   }
 
   

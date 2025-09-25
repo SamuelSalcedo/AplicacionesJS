@@ -9,14 +9,17 @@ export class SelectionModel {
       papel:2,
       tijeras:3
     }
-
+/*
     this.a=0;
     this.b=0;
 
-    this.ganador =0;
-  }
+    this.ganador="";
+  */
+  this.setReset();
+  this.getReset();
+ }
 
-  setGanador(){
+  setGanador(valor){
     console.log('valores:');
 
     console.log(this.a);
@@ -34,10 +37,21 @@ export class SelectionModel {
   }
   
   getGanador(){
-    console.log(this.ganador)
-    return Object.keys(this.opciones).find( key => this.opciones[key] === this.ganador );
+
+      console.log(this.ganador)
+      return Object.keys(this.opciones).find( key => this.opciones[key] === this.ganador );
   }
 
+  //todo el juego es ahora desde 0
+  setReset(){
+    this.a = 0;
+    this.b = 0;
+    this.ganador = "SIN JUGADAS ";
+  }
+
+  getReset(){
+    return "SIN JUGADAS";
+  }
   //selector se usa como variable para encontrar el key que coincida
   //si este valor es nulo o no valido en vez de que salte un error se da como 0
   setValueA(selector){
