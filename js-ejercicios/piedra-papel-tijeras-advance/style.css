@@ -206,7 +206,11 @@ body{
     background-color: var(--detail-color);
     color: var(--primary-color);
 }
-
+.buttonGamePlay:disabled{
+    background-color: var(--details);
+    color: var(--secundary-color);
+    cursor: not-allowed;
+}
 .select-option{
     display: flex;
     flex-direction: column;

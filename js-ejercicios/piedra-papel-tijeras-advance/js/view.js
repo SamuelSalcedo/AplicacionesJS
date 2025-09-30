@@ -1,7 +1,10 @@
 // view.js
 export class SelectionView {
+    
   constructor() {
     this.app = document.getElementById("app");
+
+    //si uno de los 2 botones no se seleccionan no se inicia el jeugo
 
     //Obtener el valor de los botones
     this.seleccion = document.querySelectorAll('.buttonGame');
@@ -19,12 +22,26 @@ export class SelectionView {
     this.mostrarGanador = document.createElement("h1");
     this.app.appendChild(this.mostrarGanador);
 
+    this.flagA = true;
+    this.flagB = true; 
   }
   /*
     mostrarSeleccion(value){
       this.mostrarSeleccionado.textContent = `Seleccionado: ${value}`;
     }
   */
+
+
+  verificarBotones(){
+    console.log("Se ingreso a verificar botones");
+    console.log("El A: "+this.flagA);
+    console.log("El B: " + this.flagB);
+    if(this.flagA || this.flagB){
+      this.jugar.disabled = true;
+    }else{
+      this.jugar.disabled = false;
+    }
+  }
   mostrarResultado(value) {
     this.mostrarGanador.textContent = `GANADOR: ${value}`;
   }
@@ -35,6 +52,9 @@ export class SelectionView {
     this.seleccion.forEach(boton => {
       boton.addEventListener("click", () => {
         handler(boton.value);
+        //se presiono el boton A
+        this.flagA = false;
+        this.verificarBotones();
       });
     });
   }
@@ -45,6 +65,9 @@ export class SelectionView {
     this.seleccion2.forEach(boton => {
       boton.addEventListener("click", () => {
         handler(boton.value);
+        //se presiono el boton B
+        this.flagB = false;
+        this.verificarBotones();  
       });
     });
   }
@@ -62,6 +85,11 @@ export class SelectionView {
   reinicioJuego(handler) {
     this.reset.addEventListener('click', () => {
       handler(this.reset.value);
+      this.jugar.disabled = true;
+      this.flagA = true;
+      this.flagB = true; 
+      this.verificarBotones();
+
     });
   }
 }

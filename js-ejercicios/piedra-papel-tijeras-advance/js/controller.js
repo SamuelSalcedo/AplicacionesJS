@@ -20,8 +20,11 @@ class selectionController {
     this.view.reinicioJuego(this.reiniciar.bind(this));
 
     this.reiniciar();
+  
   }
+
   jugarTodo(valor){    
+
     this.model.setGanador();
     this.view.mostrarResultado(this.model.getGanador());
     //el value del boton aun sin un uso adecuado asi que mejor lo quito
