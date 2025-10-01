@@ -7,7 +7,10 @@ export class SelectionModel {
       empate:0,
       piedra:1,
       papel:2,
-      tijeras:3
+      tijeras:3,
+      //intentando crear 2 opciones mas
+      serpiente:4,
+      humano:5
     }
 /*
     this.a=0;

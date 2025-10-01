@@ -207,7 +207,7 @@ body{
     color: var(--primary-color);
 }
 .buttonGamePlay:disabled{
-    background-color: var(--details);
+    background-color: var(--detail-color);
     color: var(--secundary-color);
     cursor: not-allowed;
 }
@@ -250,9 +250,10 @@ body{
     font-family: var(--fuente-game);
     font-size: 3em;
     color: var(--primary-color);
+    text-align: center;
 
     border-style: dotted;
     border-width: 15px;
-    padding: 15px;
+    padding: 25px;
     border-color: var(--details);
 }
